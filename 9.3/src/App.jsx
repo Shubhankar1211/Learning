@@ -100,6 +100,8 @@ export default App;
 
 
 
+
+
 // this is the compbine version of state and componets maked an dynamic postcomponents
 /*import { useState } from "react";
 import { PostComponent } from "./Post";
@@ -151,7 +153,7 @@ export default App;
 */
 
 // learned about the useeffect it is a stopwatch 
-import { useEffect, useState } from "react"
+/*import { useEffect, useState } from "react"
 function App(){
 
 const [count , setcount] = useState(1);
@@ -161,8 +163,12 @@ function increment(){
 }
 
 useEffect(function(){
-  setInterval(increment,1000);
+  setInterval(increment,1000); /// this on woork on time when the fucntion mount
 },[])
+
+useEffect(function(){
+  console.log("the count has been updated to " + count) // this line first render when the function mount first time then it wil change when the value of count is changed this is used when we have to give request tot the backend that react is changed
+},[count])
 
   return <div>
       {count}
@@ -170,3 +176,131 @@ useEffect(function(){
 }
 
 export default App
+*/
+
+
+// this is we are making linkdin top bar 
+/*
+import { useState } from "react"
+function App(){
+
+const [currenttab, setcurrenttab]= useState("feed")
+
+
+  return <div>
+       <button onClick={function(){setcurrenttab("home")}} style={{color : currenttab == "home" ? "red" : "black" }}>home</button>
+       <button onClick={function(){setcurrenttab("job")}} style={{color : currenttab == "job" ? "red" : "black" }}>job </button>
+       <button onClick={function(){setcurrenttab("notification")}} style={{color : currenttab == "notification" ? "red" : "black" }}>notification</button>
+       <button onClick={function(){setcurrenttab("messages")}} style={{color : currenttab == "messages" ? "red" : "black" }}>messages</button>
+       
+  </div>
+
+export default App
+*/
+
+
+// better version of above
+/*
+import { useEffect } from "react";
+import { useState } from "react";
+
+function App() {
+  const [currenttab, setcurrenttab] = useState("feed");
+
+  return (
+    <div>
+      <button
+        onClick={() => setcurrenttab("home")}
+        style={{ color: currenttab === "home" ? "red" : "black" }}
+      >
+        home
+      </button>
+
+      <button
+        onClick={() => setcurrenttab("job")}
+        style={{ color: currenttab === "job" ? "red" : "black" }}
+      >
+        job
+      </button>
+
+      <button
+        onClick={() => setcurrenttab("notification")}
+        style={{ color: currenttab === "notification" ? "red" : "black" }}
+      >
+        notification
+      </button>
+
+      <button
+        onClick={() => setcurrenttab("messages")}
+        style={{ color: currenttab === "messages" ? "red" : "black" }}
+      >
+        messages
+      </button>
+
+    </div>
+  );
+}
+
+*/
+
+import { useState, useEffect } from "react";
+
+function Counter() {
+  const [count, setcount] = useState(0);
+  
+
+
+  useEffect(function () {
+     let clock = setInterval(function () {
+      setcount(count => count + 1)
+    }, 1000)
+
+
+
+    return function(){ // so this is the clena up logic
+    clearInterval(clock)
+    }
+  }, [])
+
+
+  return <div>
+    <button>{count}</button>
+    <Counter></Counter>
+  </div>
+}
+
+export default Counter;
+
+
+
+
+
+// thsi is the way  in which counter starts from button
+function Counter1() {
+  const [count, setCount] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  useEffect(() => {
+    let clock;
+
+    if (isRunning) {
+      clock = setInterval(() => {
+        setCount(prev => prev + 1);
+      }, 1000);
+    }
+
+    // Cleanup interval when component unmounts or when isRunning becomes false
+    return () => {
+      clearInterval(clock);
+    };
+  }, [isRunning]); // useEffect re-runs when `isRunning` changes
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setIsRunning(true)}>Start</button>
+    </div>
+  );
+}
+
+
