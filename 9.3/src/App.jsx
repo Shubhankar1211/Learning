@@ -98,8 +98,10 @@ export default App;
 */
 
 
+
+
 // this is the compbine version of state and componets maked an dynamic postcomponents
-import { useState } from "react";
+/*import { useState } from "react";
 import { PostComponent } from "./Post";
 
 function App() {
@@ -146,3 +148,25 @@ function App() {
 }
 
 export default App;
+*/
+
+// learned about the useeffect it is a stopwatch 
+import { useEffect, useState } from "react"
+function App(){
+
+const [count , setcount] = useState(1);
+
+function increment(){
+  setcount(count => count+1);
+}
+
+useEffect(function(){
+  setInterval(increment,1000);
+},[])
+
+  return <div>
+      {count}
+  </div>
+}
+
+export default App
