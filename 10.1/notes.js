@@ -67,4 +67,14 @@ function Class12Program(){
   </div>
 }
 
+// useref is a hhok that provides a way to create a reference to a value or a dom elemenet persisits across renders but does not
+trigger a re-render when the value changes 
+
+key characteristics of useref:
+persistent across renders: the vlaue stored in useref persists between components re-rneders .this menas the value of a ref does not get reset when the component re -renders,unlike regualr vaiables
+
+no  re-renders on change : changing the value of a ref does not cause a component to re-rneder .thsi is differnet from state , which triggers a re -render when updated
+
+
+
 */
