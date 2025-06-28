@@ -38,6 +38,9 @@ export default App
 // 
 */
 
+import { Component } from "react"
+
+/*
 // this is the concept of lists and keys we have to 
 function App(){
   return <div>
@@ -89,6 +92,87 @@ function TodoList() {
     </div>
   );
 }
+  */
 
+/*
+// inline style
+function App(){
+  return <div style={{background : "blue"}}>
+      hello 
+  </div>
+}
+
+export default App
+// reson for double braces is beacuse of  object 
+*/
+
+
+
+/*
+// class based vs fucntional components 
+// class components are classes that extends React.Components, while fucntional Components are simpler and can use hooks
+import React, { Component } from "react";
+
+class ClassCounter extends Component {
+  state = { count: 0 }; // lowercase 'count'
+
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.increment}>Increment</button>
+      </div>
+    );
+  }
+}
+
+*/
+
+
+
+// lifecycle events 
+// in react lifecycle events (or life cycle methods ) refers to the specific points in the compontnt's life where you can execute code in resposnce to changes or action.
+// these events help you manage tasks such as fetching, subscriptions and cleaning up resorces
+
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  componentDidMount() {
+    console.log("✅ Component Mounted");
+  }
+
+  componentDidUpdate() {
+    console.log("🔁 Component Updated");
+  }
+
+  componentWillUnmount() {
+    console.log("❌ Component Will Unmount");
+  }
+
+  render() {
+    return <h2>Hello from MyComponent</h2>;
+  }
+}
+
+export default MyComponent;
+
+
+// lifecycle methods are divivde into three main phases
+// mounting : when the component is beong inserted into the DOM
+// updating : when  the component is beong re-rendering due to chnges in props or state.
+// unmounting : when the components is bseing removed from the dom
+
+
+
+
+
+
+
+// error boundary 
+// error boundaries are react componets that catch javascirpt errors in thier child component tree and display a fallback UI
 
 
