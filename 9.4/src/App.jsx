@@ -133,7 +133,7 @@ class ClassCounter extends Component {
 */
 
 
-
+/*
 // lifecycle events 
 // in react lifecycle events (or life cycle methods ) refers to the specific points in the compontnt's life where you can execute code in resposnce to changes or action.
 // these events help you manage tasks such as fetching, subscriptions and cleaning up resorces
@@ -170,9 +170,34 @@ export default MyComponent;
 
 
 
-
+*/
 
 // error boundary 
 // error boundaries are react componets that catch javascirpt errors in thier child component tree and display a fallback UI
+/*
+import React from "react";
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, info) {
+    console.log("Error caught:", error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong</h1>;
+    }
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+*/
