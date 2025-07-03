@@ -1,5 +1,7 @@
 /*
 ROLLLING UP THE STATE . UNOPTIMAL RE-REDNNERS
+// this is the consept of rooling ->: if a child want to access the state property of its sibling it cant access it to acces it we use the  concept of rolliong the state
+// in rolling the state we then pass the component to the least common ansestar so that its child can access the state 
 
 
 
