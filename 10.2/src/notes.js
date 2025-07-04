@@ -8,6 +8,7 @@ ROLLLING UP THE STATE . UNOPTIMAL RE-REDNNERS
 
 
 PROP Drilling 
+
 Prop drillling occurs when you need to pass data from a higher level compinents down to a lower -level components that si 
 several layers deep in the component tree. this often leads to the following issues:
 
@@ -19,5 +20,6 @@ to fix the problem of prop drilling
 we are  using conpcept of context api
 the context api is a powerful  feature in react that enables you to manages state across your application more effectively, especially when dealing with deeply nested somponets
 without having to pass props down amnually at every level
+
 
 */
