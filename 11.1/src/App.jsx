@@ -1,7 +1,7 @@
 // here are custom hooks learning
 
-import { useState } from "react";
-import { usePrev } from "./Hooks/useFetch"
+import { useRef } from "react";
+
 
 
 // this is the simple version of are application
@@ -116,6 +116,7 @@ function App(){
 export default App;
 */
 
+/*
 function App() {
   const [state, setstate] = useState(0);
   const prev = usePrev(state);
@@ -130,3 +131,37 @@ function App() {
 
 
 export default App
+*/
+
+
+//this is the logic of debounce 
+//A debounce hook is a custom React Hook that delays updating a value (or executing a function) until a specified amount of time has passed since the last change.
+// To avoid unnecessary calls (like API calls, search filters, or heavy calculations) that get triggered on every keystroke or state change.
+// jaise hamre passs amoze ki website h ham use me type karte h , jab ham type karn chode dete h tab vo backed ko req bhej jab tka ham type kar rhae tab tak vo req na bhej apne bas rakhe use debounce kahte h req ko apne pass rkahna jab tak ek set ime nahi pass hojata 
+
+function useDebounce(originalFn){
+  const currentcloack = useRef();
+ 
+  const fn=()=>{
+     clearTimeout(currentcloack.current);
+     currentcloack.current = setTimeout(originalFn,200)
+  }
+  return fn;
+
+}
+
+
+function App(){
+ 
+  function sendData(){
+    fetch("");
+  }
+
+  const debouncedFn = useDebounce(sendData);
+
+  return <>
+  <input type="text" onChange={debouncedFn} />
+  </>
+}
+
+export default App;
