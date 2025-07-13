@@ -1,5 +1,6 @@
 // here are custom hooks learning
 
+import { useState } from "react";
 import { useFetch } from "./Hooks/useFetch"
 
 
@@ -93,9 +94,20 @@ export default App
 
 // this is original custom fetch hook it logic is same as above
 function App(){
-  const { finalData } = useFetch("https://jsonplaceholder.typicode.com/todos/1");
+  const [currentPost, setCurrentPost]=useState(1);
+  const { finalData, loading } = useFetch("https://jsonplaceholder.typicode.com/todos/1" + currentPost);
+  
+
+  if(loading){
+    return <div>
+      Loading...
+    </div>
+  }
   return (
     <div>
+      <button onClick={()=>setCurrentPost(1)}>1</button>
+      <button onClick={()=>setCurrentPost(1)}>2</button>
+      <button onClick={()=>setCurrentPost(1)}>3</button>
       {JSON.stringify(finalData)}
     </div>
   );
