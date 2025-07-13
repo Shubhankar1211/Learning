@@ -1,7 +1,7 @@
 // here are custom hooks learning
 
 import { useState } from "react";
-import { useFetch } from "./Hooks/useFetch"
+import { usePrev } from "./Hooks/useFetch"
 
 
 // this is the simple version of are application
@@ -93,6 +93,7 @@ export default App
 
 
 // this is original custom fetch hook it logic is same as above
+/*
 function App(){
   const [currentPost, setCurrentPost]=useState(1);
   const { finalData, loading } = useFetch("https://jsonplaceholder.typicode.com/todos/1" + currentPost);
@@ -113,3 +114,19 @@ function App(){
   );
 }
 export default App;
+*/
+
+function App() {
+  const [state, setstate] = useState(0);
+  const prev = usePrev(state);
+  return <>
+    <div>
+      <p>{state}</p>
+      <button onClick={() => { setstate(cur => cur + 1) }}> Click me </button>
+      <p>This is the pervious value{prev}</p>
+    </div>
+  </>
+}
+
+
+export default App
