@@ -6,4 +6,8 @@ the performance of a react app is measured by the number of re-renders. Each re-
 key concepts in recoil 
 atom: unit of state that can be read from and written to from any component
 selectors : functions that derive state from stoms or other selectors, allowing for computed state
+
+what is atom 
+atoms are units of state that can be read from and written to form any component . when an atom's state changes. all components that subscribe to that atom will re -render
+
 */ 
