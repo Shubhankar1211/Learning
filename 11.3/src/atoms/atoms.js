@@ -1,5 +1,6 @@
-import {atom, selector,} from "recoil"
+import { atomFamily,atom, selector,} from "recoil"
 import axios from "axios";
+import { TODOS } from "../Todos/todos";
 
 export const NetworkAtom = atom({
     key : "NetworkAtom",
@@ -46,3 +47,13 @@ export const totalNotifaction = atom({
         }
     })
 }) 
+
+
+// this is how we are making atom fmaily
+
+export const todoAtomFamily = atomFamily({
+   key : "todosAtomFamily",
+   default : id =>{
+    return TODOS.find(x=> x.id === id)
+   },
+})

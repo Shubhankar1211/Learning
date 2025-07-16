@@ -1,5 +1,11 @@
 /*
 Asynchronous Data Queries
-this help in fetching backend request 
+this help in fetching backend request
+
+
+
+atomFamily 
+we have to create dynamically atom for each compontntes in this atom family help us
+
 
  */

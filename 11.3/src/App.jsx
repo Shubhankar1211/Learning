@@ -1,12 +1,16 @@
 import { useRecoilValue } from "recoil"
-import { jobsAtom, messagingAtom, NetworkAtom, notificationAtom, totalNotificationSelector } from "./atoms/atoms"
+import { jobsAtom, messagingAtom, NetworkAtom, notificationAtom, todoAtomFamily, totalNotificationSelector } from "./atoms/atoms"
 
 function App() {
 
 
   return (
     <>
+    <RecoilRoot>
       <MyApp></MyApp>
+      <Todo id ={1}></Todo>
+      <Todo id ={2}></Todo>
+    </RecoilRoot>
     </>
   )
 }
@@ -32,5 +36,21 @@ function MyApp() {
     </>
   )
 }
+
+
+
+// this is learn the concept of atom family
+//atom family return the atom unde rthe hood when ever the id is passed down is create a dynamic atoms for id
+function Todo({id}){
+  const currentTodo = useRecoilValue(todoAtomFamily(id));
+  return (
+    <>
+    {currentTodo.title}
+    {currentTodo.description}
+    <br />
+    </>
+  )
+}
+
 
 export default App
