@@ -1,4 +1,5 @@
 import {atom, selector,} from "recoil"
+import axios from "axios";
 
 export const NetworkAtom = atom({
     key : "NetworkAtom",
@@ -31,3 +32,17 @@ export const totalNotificationSelector = selector({
         return NetworkAtomCount + JobAtomCount + messagingAtomCount + notificationAtomCount
     }
 })
+
+
+
+// if an vlaue is coming form asynchoruns then is hoe you have to do it this is how we get the reqest from the backend 
+export const totalNotifaction = atom({
+    key : "notificationCount",
+    default : selector({
+        key : "notificationAtomSelector",
+        get : async ()=>{
+          const res = axios.get("")
+          return res.data
+        }
+    })
+}) 
