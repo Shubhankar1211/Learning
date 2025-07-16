@@ -143,6 +143,8 @@ export default App
 // but id you wrap a component inside a memo only if the props/state in the child has changes only then will it re-render
 //  memo donot re-render unitl a prop chnegse or state changes
 
+
+/*
 import { useEffect, useState , memo} from "react"
 
 
@@ -200,5 +202,58 @@ const DecreaseCount= memo(function() {
   </div>
 })
 
+export default App 
+*/
+
+// her ewe are learning about the selectors 
+// selectors are teh partail dummy image of atom state having only read property
+// this is code is correct but react version is not compatible for recoil  this version
+import React from "react"
+import { RecoilRoot, useRecoilValue, useSetRecoilState } from "recoil";
+import { counterAtom, evenSelector } from "./store/atoms/Counter";
+
+function App() {
+  return (
+    <RecoilRoot>
+      <Button></Button>
+      <Counter></Counter>
+      <IsEven></IsEven>
+    </RecoilRoot>
+  )
+}
+
+
+function Button() {
+  const setcount = useSetRecoilState(counterAtom);
+  function inrement() {
+    setcount(count => count + 2);
+  }
+  function decrement() {
+    setcount(count => count - 1)
+  }
+
+  return <div>
+    <button onClick={inrement}>Increase</button>
+    <button onClick={decrement}>Decrease</button>
+  </div>
+}
+
+
+function Counter() {
+  const count = useRecoilValue(counterAtom)
+  return <div>
+    {count}
+  </div>
+}
+
+
+function IsEven() {
+  const even = useRecoilValue(evenSelector)
+  return <div>
+    {even ? "Even" : "Odd"}
+  </div>
+}
+
 export default App
+
 

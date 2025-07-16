@@ -13,4 +13,11 @@ atoms are units of state that can be read from and written to form any component
 
 agar parent component re-render ho raha h to uske children bhi re -render honge which is one of the down sode of it to over come this we use consept of memo
 memo
+
+
+
+create  a glaobal atom and create the colector from these atoms and do not acess atom directily if things changes, selct selsctor only it will not re-render if the atom changes this help in miinimize re-renders
+a selector represents a piece of derived state . you can thing of derived state as the output of passing state to a pure function that derives a new value from said state.
+Derived state is a powerful consespt beacuse it lets us build dynamic data that depends on ohter data
+
 */ 
