@@ -1,4 +1,4 @@
-import { atomFamily,atom, selector,} from "recoil"
+import { atomFamily,atom, selector, selectorFamily} from "recoil"
 import axios from "axios";
 import { TODOS } from "../Todos/todos";
 
@@ -50,10 +50,25 @@ export const totalNotifaction = atom({
 
 
 // this is how we are making atom fmaily
-
 export const todoAtomFamily = atomFamily({
    key : "todosAtomFamily",
    default : id =>{
     return TODOS.find(x=> x.id === id)
    },
 })
+
+
+
+// if you have to suppose to get vlaues froma backend and servers than selctors family is used whne we have have dynamic vlaues and atomsto get them we need selector family 
+/*
+export const todosAtomFamily2 = atomFamily({
+    key : "notificationCount",
+    default : selectorFamily({
+        key : "todosAtomSelector",
+        get :  (id) => async ({get})=>{
+          const res = await axios.get(`{id}`);
+          return res.data.todo
+        },
+    })
+}) 
+    */
