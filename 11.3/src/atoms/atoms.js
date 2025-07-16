@@ -72,3 +72,6 @@ export const todosAtomFamily2 = atomFamily({
     })
 }) 
     */
+
+
+// for loading use  useRecoilStateLoadabel & fro value useRecoilVlaueLoadable
