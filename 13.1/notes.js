@@ -1,3 +1,4 @@
 /*
-learning tailwind css\\
+learning tailwind css
+console.log("hello world")
 */ 
