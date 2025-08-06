@@ -54,3 +54,4 @@ function delayedcall(fn : ()=>void){ // void is used to return nothing in the en
 delayedcall(function(){
     console.log("hello")
 })
+
