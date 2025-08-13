@@ -1,3 +1,3 @@
-/* 
-here are the notes of the next chapter
+/*
+working on new things 
 */ 
