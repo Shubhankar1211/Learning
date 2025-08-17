@@ -61,3 +61,97 @@ let hello  = () =>{
     console.log("hi  there")
 }
 
+function greet1(user : {name : string,age : number}){
+    console.log("hello" + user.name)
+}
+
+
+let user ={
+    name: "shubhankar",
+    age: 21
+}
+
+greet1(user)
+
+
+// interfaces
+// it help us in creating comple object in simple way and without repeating
+
+
+// first we have defiend usertpye and his datatype then we can simply use it any ohter ways
+interface UserType{
+    firstname : string,
+    lastname : string,
+    age1: number
+}
+
+function greet2(user : UserType){
+
+}
+
+
+let user2 : UserType = {
+    firstname: "harkirat",
+    lastname: "singh",
+    age1: 21
+}
+
+
+// this how we can use types and interface in reat to make componetents
+
+interface TodoType{
+    title : string,
+    description : string,
+    done : boolean,
+}
+
+interface TodoInput{
+    todo : TodoType,
+}
+
+function Todo({todo}: TodoInput){
+
+}
+
+// here we are learning about the types
+
+interface User3{
+    name : string,
+    age : number
+}
+
+type UserType1= {
+    name : string,
+    age : number
+}
+
+let example : UserType1 = {
+    name : "shubhankar",
+    age : 22
+}
+
+
+// in tpyes we can use unoins 
+// you want to print the id of a user, which can be a number or a string you can not do this with interfaces
+
+type SumInput = string | number ; // this thing is only given to us by types nit inteface 
+function sum(a:SumInput , b: SumInput){
+    return a+b
+}
+
+
+
+
+// intersection 
+
+type UserType2= {
+    name : string,
+    age : number
+}
+
+type UserType3= {
+    name : string,
+    department : number
+}
+
+type Teamlead = UserType2 & UserType3
