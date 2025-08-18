@@ -203,8 +203,38 @@ function Todo({todo}: TodoInput){
       return
 }
 
+// abstract class have the default mthods or default implementation
 
 
+abstract class User5{
+    name : string
+    constructor(name: string){
+        this.name = name;
+    }
+
+    abstract greet(): string;
+    hello(){  // this is the our own default implementaion method which we can implement in it but we can not implemenet in interface
+        console.log("hi there");
+    }
+}
+
+class Employee extends User5{
+    name : string;
+    constructor(name  :string){
+        super(name)
+        this.name = name;
+    }
+    greet(){
+        return "hi "+ this.name;
+    }
+}
+
+
+
+// there are two imp question releated to it ine is implementing interface (type vs interface)
+// abstract classes vs interfaces
+// if a class can implenment an interface , what is the point of an abstarct class?
+// ans  ans abstarct has default implementation but in interface there is not there
 
 
 // here we are learning about the types
