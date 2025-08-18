@@ -1,3 +1,5 @@
+import ts = require("typescript");
+
 let x = 1; // type inferencing think it is number that is why it is working otherwise it shows error 
 console.log(x);
 
@@ -74,31 +76,119 @@ let user ={
 greet1(user)
 
 
-// interfaces
-// it help us in creating comple object in simple way and without repeating
+
+
+
+// anthioer simple example how to implement a functon in the typescript and run it
+function honor( name : string): string{
+    return "hello"+ name;
+}
+
+const name5 = honor("shubhankar")
+console.log(name5);
+
+
+
+
+//interfaces
+// it help us in creating comple object in simple way and without repeating 
+// through interfaces we can making our own custom primitive or objects 
 
 
 // first we have defiend usertpye and his datatype then we can simply use it any ohter ways
 interface UserType{
     firstname : string,
-    lastname : string,
+    lastname?: string,
     age1: number
 }
 
-function greet2(user : UserType){
-
-}
-
-
 let user2 : UserType = {
-    firstname: "harkirat",
+    firstname: "ayush",
     lastname: "singh",
     age1: 21
 }
 
+function isLegal(user2: UserType): boolean{
+        if(user2.age1>= 18){
+            return true
+        }else{
+                return false;
+            }
+        }
+
+isLegal(user2)
+// one very important line that if we want to make some attributes optional in object we can add ?: this questionmark and colon make the attribute optianal
+
+
+
+// one more imp proverty of interface is you can implement interface as a class 
+
+interface People{
+    name : string,
+    age : number,
+    happy :()=> string
+}
+
+let person : People = {
+    name : " ayush",
+    age  : 18,
+    happy: ()=>{
+        return "hi" 
+    }
+}
+
+const ex = person.happy();
+ console.log(ex)
+
+ // this is simple how we make things from the class
+interface People2{
+    name : string,
+    age : number,
+}
+
+ class Manager implements People2{
+    name: string;
+    age: number
+
+    constructor(name : string, age: number){
+        this.name = name;
+        this.age = age
+    }
+ }
+
+let user3 = new Manager("john" , 40);
+console.log(user3)
+
+
+
+
+// this is how we can extend property from the another classes
+class shape {
+    area(){
+        console.log("hi i am area")
+    }
+}
+
+class Recatangle extends shape{
+    width: number;
+    hieght: number;
+
+    constructor(){
+        super()
+        this.width = 1;
+        this.hieght = 2;
+    }
+}
+
+const r = new Recatangle()
+r.area()
+
+
+
+
+
 
 // this how we can use types and interface in reat to make componetents
-
 interface TodoType{
     title : string,
     description : string,
@@ -110,12 +200,15 @@ interface TodoInput{
 }
 
 function Todo({todo}: TodoInput){
-
+      return
 }
 
-// here we are learning about the types
 
-interface User3{
+
+
+
+// here we are learning about the types
+interface User3{  // the two work same thing 
     name : string,
     age : number
 }
@@ -131,19 +224,21 @@ let example : UserType1 = {
 }
 
 
+
 // in tpyes we can use unoins 
 // you want to print the id of a user, which can be a number or a string you can not do this with interfaces
-
-type SumInput = string | number ; // this thing is only given to us by types nit inteface 
-function sum(a:SumInput , b: SumInput){
+// these boolean number are primitives int the typescript
+type SumInput = number | number ; // this thing is only given to us by types nit inteface 
+function sum6(a:SumInput , b: SumInput) : number{
     return a+b
 }
+
+sum6(5,6);
 
 
 
 
 // intersection 
-
 type UserType2= {
     name : string,
     age : number
