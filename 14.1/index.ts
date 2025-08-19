@@ -237,6 +237,11 @@ class Employee extends User5{
 // ans  ans abstarct has default implementation but in interface there is not there
 
 
+
+
+
+
+// here we are learing about the types in type script which is most important thing
 // here we are learning about the types
 interface User3{  // the two work same thing 
     name : string,
@@ -280,3 +285,24 @@ type UserType3= {
 }
 
 type Teamlead = UserType2 & UserType3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// here we are learnign about the advanced type script and and advanced apis
