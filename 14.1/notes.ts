@@ -65,7 +65,4 @@ What are static members in TypeScript classes?
 
 How can you use getter and setter (accessor) functions in classes?
 
-
-
-
 */
