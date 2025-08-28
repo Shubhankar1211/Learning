@@ -88,6 +88,7 @@ What happens if an object does not implement all properties of an interface?
 TypeScript will throw a compile-time error.
 An object must implement all required properties defined in the interface.
 Optional properties (?) can be omitted.
+
 interface User {
   id: number;
   name: string;
