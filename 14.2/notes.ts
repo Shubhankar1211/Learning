@@ -100,7 +100,6 @@ const u: User = {
 // ❌ Error: Property 'name' is missing
 
 
-
 Types
 What is a type alias in TypeScript? Provide an example.
 
