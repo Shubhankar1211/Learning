@@ -157,7 +157,6 @@ Use case: When you need to combine multiple types into one.
 type Person = { name: string };
 type Employee = { id: number };
 type Worker = Person & Employee;
-
 const w: Worker = { name: "John", id: 123 };
 
 
