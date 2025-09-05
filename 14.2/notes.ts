@@ -163,6 +163,7 @@ const w: Worker = { name: "John", id: 123 };
 Classes
 How do you declare a class in TypeScript? Show syntax with a constructor and method.
 
+
 How do access modifiers (public, private, protected) work in TypeScript classes?
 
 What are abstract classes in TypeScript? How are they different from interfaces?
