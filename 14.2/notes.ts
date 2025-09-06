@@ -162,20 +162,108 @@ const w: Worker = { name: "John", id: 123 };
 
 Classes
 How do you declare a class in TypeScript? Show syntax with a constructor and method.
+class Person {
+  name: string;
+
+  constructor(name: string) { // Constructor
+    this.name = name;
+  }
+
+  greet(): string { // Method
+    return `Hello, ${this.name}`;
+  }
+}
+const alice = new Person("Alice");
+console.log(alice.greet()); // "Hello, Alice"
+This defines a Person class with a property, a constructor, and a method.
+
 
 
 How do access modifiers (public, private, protected) work in TypeScript classes?
+public (default): Accessible anywhere.
+
+private: Only accessible inside the class.
+
+protected: Accessible in the class and derived subclasses.
+class Example {
+  public x: number;
+  private y: number;
+  protected z: number;
+
+  constructor(x: number, y: number, z: number) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+}
+
+
+
 
 What are abstract classes in TypeScript? How are they different from interfaces?
+Abstract class: Cannot be instantiated directly; may implement some methods. Subclasses must implement abstract methods.
+
+Interface: Specifies contracts; cannot contain implementation. Classes implement interfaces and define all details.
+abstract class Animal {
+  abstract makeSound(): void;
+  move(): void { console.log("Moving"); }
+}
+
+interface IAnimal {
+  makeSound(): void;
+}
+
 
 How does TypeScript support inheritance?
+Use the extends keyword for inheritance.
+class Animal {
+  move() { console.log("Animal moved"); }
+}
+class Dog extends Animal {
+  bark() { console.log("Woof!"); }
+}
+const d = new Dog();
+d.move(); // "Animal moved"
+d.bark(); // "Woof!"
+
 
 What is a readonly property in a class and how do you declare it?
+A readonly property can be set only at declaration or in the constructor and cannot be changed later.
+class Circle {
+  readonly pi: number = 3.14;
+  constructor(public radius: number) {}
+}
+const c = new Circle(2);
+// c.pi = 3.1415; // Error: Cannot assign to 'pi' because it is a read-only property.
+
 
 What are static members in TypeScript classes?
+Static members belong to the class itself, not instances, and are accessed using the class name.
+class MathUtils {
+  static pi: number = 3.1416;
+  static area(r: number): number {
+    return MathUtils.pi * r * r;
+  }
+}
+console.log(MathUtils.area(2)); // 12.5664
 
 How can you use getter and setter (accessor) functions in classes?
+Use get and set accessors to control property access logic.
+class Employee {
+  private _salary: number = 0;
 
+  get salary(): number {
+    return this._salary;
+  }
+
+  set salary(amount: number) {
+    if (amount < 0) throw new Error("Invalid salary");
+    this._salary = amount;
+  }
+}
+const e = new Employee();
+e.salary = 50000;
+console.log(e.salary); // 50000
 
 
 
