@@ -264,7 +264,4 @@ class Employee {
 const e = new Employee();
 e.salary = 50000;
 console.log(e.salary); // 50000
-
-
-
 */ 
