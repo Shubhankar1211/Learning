@@ -161,6 +161,15 @@ const w: Worker = { name: "John", id: 123 };
 
 
 Classes
+
+
+
+
+
+
+
+
+
 How do you declare a class in TypeScript? Show syntax with a constructor and method.
 class Person {
   name: string;
@@ -176,6 +185,14 @@ class Person {
 const alice = new Person("Alice");
 console.log(alice.greet()); // "Hello, Alice"
 This defines a Person class with a property, a constructor, and a method.
+
+
+
+
+
+
+
+
 
 
 
@@ -200,6 +217,15 @@ class Example {
 
 
 
+
+
+
+
+
+
+
+
+
 What are abstract classes in TypeScript? How are they different from interfaces?
 Abstract class: Cannot be instantiated directly; may implement some methods. Subclasses must implement abstract methods.
 
@@ -214,6 +240,13 @@ interface IAnimal {
 }
 
 
+
+
+
+
+
+
+
 How does TypeScript support inheritance?
 Use the extends keyword for inheritance.
 class Animal {
@@ -225,6 +258,12 @@ class Dog extends Animal {
 const d = new Dog();
 d.move(); // "Animal moved"
 d.bark(); // "Woof!"
+
+
+
+
+
+
 
 
 What is a readonly property in a class and how do you declare it?
@@ -246,6 +285,11 @@ class MathUtils {
   }
 }
 console.log(MathUtils.area(2)); // 12.5664
+
+
+
+
+
 
 How can you use getter and setter (accessor) functions in classes?
 Use get and set accessors to control property access logic.
