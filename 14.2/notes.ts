@@ -134,6 +134,7 @@ type Response = "success" | "error" | "loading"; // cannot be done with interfac
 
 
 
+
 Can a type alias extend another type or interface?
 Yes, but instead of extends, we use intersection (&).
 type Person = { name: string };
