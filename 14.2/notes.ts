@@ -20,6 +20,14 @@ const user: User = {
 
 
 How does an interface differ from a type alias?
+
+
+
+
+
+
+
+
 Both interface and type can define object shapes, but there are key differences:
 
 Aspect	Interface	Type Alias
@@ -44,6 +52,11 @@ type Animal = {
 
 
 
+
+
+
+
+
 Can an interface extend another interface? Give an example.
 es. Interfaces can extend one or more interfaces using the extends keyword.
 interface Person {
@@ -60,6 +73,10 @@ const emp: Employee = {
   age: 25,
   employeeId: "E123"
 };
+
+
+
+
 
 
 Can a class implement multiple interfaces? How?
@@ -84,6 +101,10 @@ class Service implements Logger, Serializer {
 
 
 
+
+
+
+
 What happens if an object does not implement all properties of an interface?
 TypeScript will throw a compile-time error.
 An object must implement all required properties defined in the interface.
@@ -98,6 +119,11 @@ const u: User = {
   id: 1
 };
 // ❌ Error: Property 'name' is missing
+
+
+
+
+
 
 
 Types
