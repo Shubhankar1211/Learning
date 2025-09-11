@@ -127,7 +127,6 @@ const u: User = {
 
 
 Types
-
 What is a type alias in TypeScript? Provide an example.
 A type alias allows you to give a name to any type (primitive, object, union, intersection, tuple, etc.).
 It doesn’t create a new type, just a reusable label for an existing type.
@@ -172,6 +171,8 @@ interface Logger { log(msg: string): void; }
 type ExtendedLogger = Logger & { level: string };
 
 
+
+
 What are union and intersection types in TypeScript? Give use cases.
 Union (|): A type can be one of many options.
 Use case: When a variable can hold multiple types of values.
@@ -179,6 +180,8 @@ type Input = string | number;
 let data: Input;
 data = "Hello";  // valid
 data = 42;       // valid
+
+
 
 Use case: When you need to combine multiple types into one.
 type Person = { name: string };
