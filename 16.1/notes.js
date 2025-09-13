@@ -97,7 +97,9 @@ By default, WebSocket uses port 80 (ws://) for insecure connections and port 443
 
 
 
- Can you send binary data with WebSocket?
+
+Can you send binary data with WebSocket?
 Answer:
 Yes, WebSocket supports both text and binary messages. You can send binary data using Blob, ArrayBuffer, or typed arrays, enabling use cases like file transfer, streaming, and gaming.
+
 */
