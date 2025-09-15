@@ -83,6 +83,7 @@ Use the wss:// (WebSocket Secure) protocol to establish an encrypted TLS connect
 
 
 
+
 Explain how you would scale a WebSocket-based system.
 Answer:
 Use load balancers (supporting sticky sessions if needed), horizontally scale servers, and employ message brokers (e.g., Redis, Kafka) to synchronize messages or user state between server instances. Consider sharding connections and careful resource management for handling high concurrency.
@@ -91,6 +92,7 @@ Use load balancers (supporting sticky sessions if needed), horizontally scale se
 
 
  Does WebSocket use the same ports as HTTP?
+ 
 Answer:
 By default, WebSocket uses port 80 (ws://) for insecure connections and port 443 (wss://) for secure, TLS-encrypted connections, just like HTTP and HTTPS do
 
