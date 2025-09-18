@@ -69,6 +69,7 @@ Monitor the onclose/onerror events on the client. If disconnected, you can imple
 
 
 
+
 How do you secure a WebSocket connection?
 Answer:
 Use the wss:// (WebSocket Secure) protocol to establish an encrypted TLS connection. Also, implement authentication through tokens or cookies on connection, use secure origins, and verify client identity to protect against unauthorized access.
