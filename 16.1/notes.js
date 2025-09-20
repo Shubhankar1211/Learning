@@ -39,6 +39,7 @@ Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock ticker
 Answer: WebSockets commonly use TCP port 80 (ws://) for unencrypted and port 443 (wss://) for encrypted communications.
 
 
+
 What are the main benefits of using WebSockets?
 Answer: Real-time, low-latency, bidirectional communication; reduced overhead; single persistent connection for continuous data exchange.
 
