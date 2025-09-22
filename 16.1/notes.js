@@ -56,13 +56,9 @@ The client sends an HTTP request with the Upgrade: websocket header. The server 
 Answer:
 
 Real-time chat/messaging apps
-
 Online multiplayer gaming
-
 Live stock or trading platforms
-
 Collaborative editing tools (e.g., Google Docs, Figma)
-
 IoT device data streaming
 
 
