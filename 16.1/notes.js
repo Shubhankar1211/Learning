@@ -31,7 +31,7 @@ Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock ticker
 
 
 
- Give some real-world use cases of WebSockets.
+Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
 
@@ -45,7 +45,7 @@ What are the main benefits of using WebSockets?
 Answer: Real-time, low-latency, bidirectional communication; reduced overhead; single persistent connection for continuous data exchange.
 
 
- How is a WebSocket connection established?
+How is a WebSocket connection established?
 Answer:
 The client sends an HTTP request with the Upgrade: websocket header. The server responds with 101 Switching Protocols to confirm. After this handshake, the protocol switches from HTTP to WebSocket, and both client and server can now exchange messages freely until the connection is closed by either side.
 
