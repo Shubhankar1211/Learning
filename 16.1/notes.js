@@ -22,6 +22,8 @@ Efficient communication: Greatly reduce overhead compared to HTTP, as no repeate
 
 Typical use cases: Live chat/messaging (like WhatsApp Web), multiplayer games, collaborative tools (like Google Docs), live financial data, and IoT devices.
 
+
+
  How is WebSocket different from HTTP?
 Answer: HTTP is a unidirectional, request-response protocol where each exchange opens and closes a connection. WebSockets keep a single connection open for ongoing, real-time, two-way communication—greatly reducing latency and overhead.
 
