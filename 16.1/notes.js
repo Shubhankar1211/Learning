@@ -19,7 +19,6 @@ Why are WebSockets used?
 Real-time updates: They allow instant data transfer without waiting for repeated HTTP requests (no polling or refreshes needed).
 
 Efficient communication: Greatly reduce overhead compared to HTTP, as no repeated headers or setup/teardown of connections are needed—just one open connection.
-
 Typical use cases: Live chat/messaging (like WhatsApp Web), multiplayer games, collaborative tools (like Google Docs), live financial data, and IoT devices.
 
 
