@@ -7,7 +7,6 @@ WebSockets are a protocol that enables persistent, bi-directional, full-duplex c
 
 What is a WebSocket?
 Definition: A computer communications protocol that provides full-duplex, real-time, two-way interaction between a client and server over one persistent TCP connection.
-
 How it starts: It begins as a standard HTTP connection, but the client requests to "upgrade" the connection. When the server agrees, the connection switches from HTTP to WebSocket protocol.
 How it works: Either client or server can send messages independently at any time—unlike HTTP, which requires the client to request and the server to respond each time.
 
