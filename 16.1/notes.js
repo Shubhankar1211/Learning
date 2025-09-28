@@ -21,10 +21,10 @@ Typical use cases: Live chat/messaging (like WhatsApp Web), multiplayer games, c
 
 
 
- How is WebSocket different from HTTP?
+How is WebSocket different from HTTP?
 Answer: HTTP is a unidirectional, request-response protocol where each exchange opens and closes a connection. WebSockets keep a single connection open for ongoing, real-time, two-way communication—greatly reducing latency and overhead.
 
- Give some real-world use cases of WebSockets.
+Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
 
@@ -34,7 +34,7 @@ Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
 
- What ports do WebSockets use?
+What ports do WebSockets use?
 Answer: WebSockets commonly use TCP port 80 (ws://) for unencrypted and port 443 (wss://) for encrypted communications.
 
 
@@ -92,7 +92,7 @@ Use load balancers (supporting sticky sessions if needed), horizontally scale se
 
 
 
- Does WebSocket use the same ports as HTTP?
+Does WebSocket use the same ports as HTTP?
 Answer:
 By default, WebSocket uses port 80 (ws://) for insecure connections and port 443 (wss://) for secure, TLS-encrypted connections, just like HTTP and HTTPS do
 
@@ -102,5 +102,4 @@ By default, WebSocket uses port 80 (ws://) for insecure connections and port 443
 
 Can you send binary data with WebSocket?
 Answer:Yes, WebSocket supports both text and binary messages. You can send binary data using Blob, ArrayBuffer, or typed arrays, enabling use cases like file transfer, streaming, and gaming.
-
 */
