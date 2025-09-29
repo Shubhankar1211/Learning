@@ -15,7 +15,6 @@ How it works: Either client or server can send messages independently at any tim
 
 Why are WebSockets used?
 Real-time updates: They allow instant data transfer without waiting for repeated HTTP requests (no polling or refreshes needed).
-
 Efficient communication: Greatly reduce overhead compared to HTTP, as no repeated headers or setup/teardown of connections are needed—just one open connection.
 Typical use cases: Live chat/messaging (like WhatsApp Web), multiplayer games, collaborative tools (like Google Docs), live financial data, and IoT devices.
 
@@ -23,7 +22,6 @@ Typical use cases: Live chat/messaging (like WhatsApp Web), multiplayer games, c
 
 How is WebSocket different from HTTP?
 Answer: HTTP is a unidirectional, request-response protocol where each exchange opens and closes a connection. WebSockets keep a single connection open for ongoing, real-time, two-way communication—greatly reducing latency and overhead.
-
 Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
@@ -51,7 +49,7 @@ The client sends an HTTP request with the Upgrade: websocket header. The server 
 
 
 
- What are typical use cases for WebSockets?
+What are typical use cases for WebSockets?
 Answer:
 
 Real-time chat/messaging apps
