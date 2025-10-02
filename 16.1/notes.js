@@ -26,13 +26,13 @@ Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
 
+
 Give some real-world use cases of WebSockets.
 Answer: Chat apps (Slack, WhatsApp Web), live financial dashboards (stock tickers), collaborative tools (Google Docs), live gaming, online auctions, real-time tracking (Uber).
 
 
 What ports do WebSockets use?
 Answer: WebSockets commonly use TCP port 80 (ws://) for unencrypted and port 443 (wss://) for encrypted communications.
-
 
 
 
