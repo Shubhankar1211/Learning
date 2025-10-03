@@ -48,8 +48,7 @@ The client sends an HTTP request with the Upgrade: websocket header. The server 
 
 
 What are typical use cases for WebSockets?
-Answer:
-
+Answer
 Real-time chat/messaging apps
 Online multiplayer gaming
 Live stock or trading platforms
@@ -91,7 +90,6 @@ Use load balancers (supporting sticky sessions if needed), horizontally scale se
 Does WebSocket use the same ports as HTTP?
 Answer:
 By default, WebSocket uses port 80 (ws://) for insecure connections and port 443 (wss://) for secure, TLS-encrypted connections, just like HTTP and HTTPS do
-
 
 
 
