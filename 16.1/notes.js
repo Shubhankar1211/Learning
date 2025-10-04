@@ -62,9 +62,6 @@ Answer:
 Monitor the onclose/onerror events on the client. If disconnected, you can implement a reconnection strategy by attempting to re-establish the link after a certain delay (using exponential backoff or a fixed interval). Always ensure resources are cleaned up between reconnect attempts.
 
 
-
-
-
 How do you secure a WebSocket connection?
 Answer:
 Use the wss:// (WebSocket Secure) protocol to establish an encrypted TLS connection. Also, implement authentication through tokens or cookies on connection, use secure origins, and verify client identity to protect against unauthorized access.
@@ -90,7 +87,6 @@ Use load balancers (supporting sticky sessions if needed), horizontally scale se
 Does WebSocket use the same ports as HTTP?
 Answer:
 By default, WebSocket uses port 80 (ws://) for insecure connections and port 443 (wss://) for secure, TLS-encrypted connections, just like HTTP and HTTPS do
-
 
 
 
