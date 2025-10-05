@@ -82,12 +82,9 @@ Answer:
 Use load balancers (supporting sticky sessions if needed), horizontally scale servers, and employ message brokers (e.g., Redis, Kafka) to synchronize messages or user state between server instances. Consider sharding connections and careful resource management for handling high concurrency.
 
 
-
-
 Does WebSocket use the same ports as HTTP?
 Answer:
 By default, WebSocket uses port 80 (ws://) for insecure connections and port 443 (wss://) for secure, TLS-encrypted connections, just like HTTP and HTTPS do
-
 
 
 Can you send binary data with WebSocket?
