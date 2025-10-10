@@ -20,10 +20,6 @@ const user: User = {
 
 
 How does an interface differ from a type alias?
-
-
-
-
 Both interface and type can define object shapes, but there are key differences:
 
 Aspect	Interface	Type Alias
