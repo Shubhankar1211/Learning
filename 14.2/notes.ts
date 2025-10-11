@@ -46,9 +46,6 @@ type Animal = {
 
 
 
-
-
-
 Can an interface extend another interface? Give an example.
 es. Interfaces can extend one or more interfaces using the extends keyword.
 interface Person {
