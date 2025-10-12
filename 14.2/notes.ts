@@ -67,7 +67,6 @@ const emp: Employee = {
 
 
 
-
 Can a class implement multiple interfaces? How?
 Yes. A class can implement multiple interfaces by separating them with commas.
 interface Logger {
@@ -92,8 +91,6 @@ class Service implements Logger, Serializer {
 
 
 
-
-
 What happens if an object does not implement all properties of an interface?
 TypeScript will throw a compile-time error.
 An object must implement all required properties defined in the interface.
@@ -108,8 +105,6 @@ const u: User = {
   id: 1
 };
 // ❌ Error: Property 'name' is missing
-
-
 
 
 
