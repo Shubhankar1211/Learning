@@ -212,7 +212,6 @@ class Example {
 
 
 
-
 What are abstract classes in TypeScript? How are they different from interfaces?
 Abstract class: Cannot be instantiated directly; may implement some methods. Subclasses must implement abstract methods.
 
