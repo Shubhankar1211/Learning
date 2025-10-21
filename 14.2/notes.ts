@@ -191,7 +191,6 @@ This defines a Person class with a property, a constructor, and a method.
 
 
 
-
 How do access modifiers (public, private, protected) work in TypeScript classes?
 public (default): Accessible anywhere.
 
