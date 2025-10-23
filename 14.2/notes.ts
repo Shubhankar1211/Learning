@@ -173,6 +173,9 @@ const w: Worker = { name: "John", id: 123 };
 
 Classes
 
+
+
+
 How do you declare a class in TypeScript? Show syntax with a constructor and method.
 class Person {
   name: string;
