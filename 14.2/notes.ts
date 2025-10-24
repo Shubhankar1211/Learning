@@ -154,6 +154,8 @@ type ExtendedLogger = Logger & { level: string };
 
 
 
+
+
 What are union and intersection types in TypeScript? Give use cases.
 Union (|): A type can be one of many options.
 Use case: When a variable can hold multiple types of values.
